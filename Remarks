@@ -1,0 +1,15 @@
+02.07.2020:
+*change: changed boolean output variables (is_like, is_retweet, ...) to binary integers. renamed timestamp dependent variables to match the binary representation. This means that the timestmap variables will no longer be part of the dataset.
+*section: enhance dataset with derived columns
+
+*change: integrated tfidf. Had to move the to_hex_list function which was in the "Format data" section for this.
+*section: enhance dataset with derived columns
+
+*change: formulation in Social network section should be changed:
+We can see that the centrality of the engaging user has some impact on the probability of the engagement, since there are less not important users in the dataset, but we get higher numbers for the engagement types among the important users. 
+*section: social network
+
+*change: ground truth files can be created and include 1s and 0s. All non-relevant rows are excluded. Non-relevant are those which have only 0s in all engagement variables.
+section: Generate test design - T2.1
+
+*change: text_tokens_tfidf is not encodable by the MultiLabelBinarizer. it was therefore temporarily removed from the independent variables (tweet_feature_cols). Maybe the output format should be checked and reconsidered?
