@@ -13,3 +13,14 @@ We can see that the centrality of the engaging user has some impact on the proba
 section: Generate test design - T2.1
 
 *change: text_tokens_tfidf is not encodable by the MultiLabelBinarizer. it was therefore temporarily removed from the independent variables (tweet_feature_cols). Maybe the output format should be checked and reconsidered?
+
+07.07.2020:
+Logistic regression: No validation was performed. Should be in the form of a 10-fold cross validation.
+
+test_indices used are from previous cell where actually cross validation was used. It cannot be taken from there as it is only the last split.
+
+Baseline evaluation still missing for test set
+
+test data was not encoded and transformed into a matrix with reduced dimensionality using truncatedSVD but was used in its "raw form"
+
+The sklearn neural networks approach does not return a single model but additionally a layer of the model. I have no idea how to deal with this. However, I found the metrics and loss function that we need for the evaluation, so it is better to stick with the keras model.
